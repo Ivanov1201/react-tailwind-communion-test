@@ -1,10 +1,15 @@
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
+  const router = useRouter()
+
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div>
+      <button type="button" onClick={() => router.push('/home')}>
+        Click me
+      </button>
+    </div>
   )
 }
 
