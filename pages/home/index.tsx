@@ -21,7 +21,7 @@ const TipComponent: FC<TokenTipProps> = ({ number, tip, img }) => {
 				<div className='flex flex-wrap py-[22px]'>
 					<div className='text-[45px] leading-none font-bold text-color-text-normal'>{number}</div>
 					<div className='flex flex-col justify-center ml-[12px]'>
-						<p className='text-[14px] text-color-text-card-title'>Token Tip</p>
+						<p className='text-[14px] text-color-text-card-title leading-[0.8]'>Token Tip</p>
 						<p className='text-[17px] text-color-text-number font-bold'>{tip}</p>
 					</div>
 				</div>
@@ -60,12 +60,12 @@ type HistoryProps = {
 const HistoryComponent: FC<HistoryProps> = ({ checked, tip, time }) => {
 	return (
 		<>
-			<div className="mb-[10px] bg-white rounded-[5px] px-[18px] flex flex-wrap justify-between">
-				<div className='flex flex-wrap py-[19px]'>
+			<div className="mb-[3px] bg-white rounded-[5px] px-[18px] flex flex-wrap justify-between">
+				<div className='flex flex-wrap py-[16px]'>
 					{
 						checked ? (<Image width='25px' height='21px' src="/images/check-icon.svg" alt="" />) : (<Image width='25px' height='21px' src="/images/warning-icon.svg" alt="" />)
 					}
-					<p className='text-[15px] ml-[7px] text-color-text-number'>{tip}</p>
+					<p className='text-[15px] ml-[7px] text-color-text-number flex flex-col justify-center leading-[0.8]'>{tip}</p>
 				</div>
 				<div className='text-[13px] flex text-color-text-gray items-center'>
 					{time}
@@ -173,7 +173,7 @@ const Home: NextPage = () => {
 		<Mainlayout>
 
 			<div className="flex-auto content-center">
-				<div className="max-w-sm max-h-4xl ml-auto mr-auto bg-color-background-body">
+				<div className="bg-color-background-body">
 					<div className="flex flex-col pt-[54px] pr-[25px] pl-[25px] font-roboto overflow-y-auto mobile-screen-height">
 						{/* <InfiniteScroll
 							pageStart={0}
