@@ -18,6 +18,7 @@ module.exports = {
         "active": "#FF8A00",
         "color-text-normal": "#6D6F8A",
         "color-text-placeholder": "#A9ABB9",
+        "color-text-gray": "#9094BB",
         "color-text-number": "#606279",
         "color-text-card-title": "#B0B2D6",
 
