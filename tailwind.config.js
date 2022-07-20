@@ -39,6 +39,9 @@ module.exports = {
         ".navbar-border-transparent": {
           borderTop: '4px solid transparent'
         },
+        ".mobile-screen-height": { 
+          height: 'calc(100vh - 60px)'
+        }
       });
     }
   ],

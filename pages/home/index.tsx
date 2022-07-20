@@ -1,5 +1,9 @@
+//modules
 import React, { FC, useState } from 'react';
 import type { NextPage } from 'next'
+// import InfiniteScroll from 'react-infinite-scroller';
+
+//custom Components
 import Mainlayout from '../../layout/main'
 
 //token tip component
@@ -57,7 +61,7 @@ const HistoryComponent: FC<HistoryProps> = ({ checked, tip, time }) => {
 		<>
 			<div className="mb-[10px] bg-white rounded-[5px] px-[18px] flex flex-wrap justify-between">
 				<div className='flex flex-wrap py-[19px]'>
-				{
+					{
 						checked ? (<img src="/images/check-icon.svg" alt="" />) : (<img src="/images/warning-icon.svg" alt="" />)
 					}
 					<p className='text-[15px] ml-[7px] text-color-text-number'>{tip}</p>
@@ -169,51 +173,58 @@ const Home: NextPage = () => {
 
 			<div className="flex-auto content-center">
 				<div className="max-w-sm max-h-4xl ml-auto mr-auto bg-color-background-body">
-					<div className="flex flex-col pt-[54px] pr-[25px] pl-[25px] font-roboto h-100vh overflow-y-scroll h-screen">
-						{
-							expanded ? (
-								<></>
-							) : (
-								<>
-									<div className="font-medium flex text-color-text-normal text-bold text-[19px]">
-										<img src="/images/emoji-happy.svg" className='mr-[9px]' alt="" />
-										Hi, Alexander
-									</div>
-
-									<div className="mt-[20px] mb-[22px] bg-color-background-normal rounded-[6px] p-[17px]">
-										<div className="flex flex-row content-center">
-											<div className="flex-auto text-color-text-placeholder w-40 text-[16px] mr-[15px] font-normal">
-												<p className='my-[6px]'>Your Balance</p>
-											</div>
-											<div className='flex bg-white rounded-[6px]'>
-												<img src="/images/caret-left-icon.svg" className='mx-[15px]' alt="" width="10" height="15" />
-												<input type="text" className='bg-white w-full focus-visible:outline-0 text-[17px] text-color-text-normal rounded-[6px]' defaultValue="5500 PPP" />
-											</div>
-
-
+					<div className="flex flex-col pt-[54px] pr-[25px] pl-[25px] font-roboto overflow-y-auto mobile-screen-height">
+						{/* <InfiniteScroll
+							pageStart={0}
+							// loadMore={loadFunc}
+							hasMore={true || false}
+							loader={<div className="loader" key={0}>Loading ...</div>}
+						> */}
+							{
+								expanded ? (
+									<></>
+								) : (
+									<>
+										<div className="font-medium flex text-color-text-normal text-bold text-[19px]">
+											<img src="/images/emoji-happy.svg" className='mr-[9px]' alt="" />
+											Hi, Alexander
 										</div>
-									</div>
-									{
-										tips.map((element, index) => (
-											<TipComponent number={element.number} tip={element.tip} img={element.img} key={index}></TipComponent>
-										))
-									}
-								</>
-							)
-						}
-						<div className='flex justify-between my-[20px]'>
-							<p className='text-[16px] text-color-text-number font-bold'>History</p>
-							<p className='text-[13px] text-active cursor-pointer' onClick={() => setExpanded(!expanded)}>{expanded ? 'Show Less' : 'Show All'}</p>
-						</div>
+
+										<div className="mt-[20px] mb-[22px] bg-color-background-normal rounded-[6px] p-[17px]">
+											<div className="flex flex-row content-center">
+												<div className="flex-auto text-color-text-placeholder w-40 text-[16px] mr-[15px] font-normal">
+													<p className='my-[6px]'>Your Balance</p>
+												</div>
+												<div className='flex bg-white rounded-[6px]'>
+													<img src="/images/caret-left-icon.svg" className='mx-[15px]' alt="" width="10" height="15" />
+													<input type="text" className='bg-white w-full focus-visible:outline-0 text-[17px] text-color-text-normal rounded-[6px]' defaultValue="5500 PPP" />
+												</div>
+
+
+											</div>
+										</div>
+										{
+											tips.map((element, index) => (
+												<TipComponent number={element.number} tip={element.tip} img={element.img} key={index}></TipComponent>
+											))
+										}
+									</>
+								)
+							}
+							<div className='flex justify-between my-[20px]'>
+								<p className='text-[16px] text-color-text-number font-bold'>History</p>
+								<p className='text-[13px] text-active cursor-pointer' onClick={() => setExpanded(!expanded)}>{expanded ? 'Show Less' : 'Show All'}</p>
+							</div>
 							{
 								historyDataDisplay.map((element, index) => (
-									<HistoryComponent checked={element.checked} tip={element.tip} time={element.time} key={index}/>
+									<HistoryComponent checked={element.checked} tip={element.tip} time={element.time} key={index} />
 								))
 							}
+						{/* </InfiniteScroll> */}
 					</div>
-				</div>
 			</div>
-		</Mainlayout>
+		</div>
+		</Mainlayout >
 	)
 }
 
