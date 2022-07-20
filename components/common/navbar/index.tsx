@@ -9,8 +9,8 @@ type NavbarProps = {
 
 const Navbar: FC<NavbarProps> = ({ children }) => {
 
-  const router = useRouter().pathname.split('/')[1]
-  console.log(router)
+  const router = useRouter()
+  console.log(router.asPath.split('/')[1])
 
   return (
     <div className="max-w-sm ml-auto mr-auto">
@@ -20,7 +20,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
       >
         <div id="tabs" className="flex justify-between mx-[35px]">
           <a
-            href="#"
+            onClick={() => router.push('/home')}
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center navbar-border-transparent  py-[20px] border-t-4 border-active"
           >
             <svg
@@ -42,7 +42,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
             </svg>
           </a>
           <a
-            href="#"
+            onClick={() => router.push('/cursor')}
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center navbar-border-transparent  py-[20px] "
           >
             <svg
@@ -62,7 +62,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
             </svg>
           </a>
           <a
-            href="#"
+            onClick={() => router.push('/shopping')}
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center navbar-border-transparent  py-[20px] "
           >
             <svg
@@ -90,7 +90,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
             </svg>
           </a>
           <a
-            href="#"
+            onClick={() => router.push('/setting')}
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center navbar-border-transparent  py-[20px] "
           >
             <svg
