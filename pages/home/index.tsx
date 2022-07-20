@@ -19,7 +19,7 @@ const TipComponent: FC<TokenTipProps> = ({ number, tip, img }) => {
 		<>
 			<div className="mb-[10px] bg-white rounded-[12px] px-[18px] flex flex-wrap justify-between">
 				<div className='flex flex-wrap py-[25px]'>
-					<div className='text-[45px] font-bold text-color-text-normal'>{number}</div>
+					<div className='text-[45px] font-bold text-color-text-normal leading-[0.8] flex flex-col justify-center'>{number}</div>
 					<div className='flex flex-col justify-center ml-[12px]'>
 						<p className='text-[14px] text-color-text-card-title'>Token Tip</p>
 						<p className='text-[17px] text-color-text-number font-bold'>{tip}</p>
