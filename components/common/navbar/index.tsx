@@ -13,7 +13,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
   console.log(router.asPath.split('/')[1])
 
   return (
-    <div className="w-full md:w-1/4 ml-auto mr-auto">
+    <div className="w-full md:w-1/3 ml-auto mr-auto">
       <section
         id="bottom-navigation"
         className="block fixed inset-x-0 bottom-0 z-10 bg-white navbar-shadow"
