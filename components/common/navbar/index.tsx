@@ -16,7 +16,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
     <div className="w-full md:w-1/3 ml-auto mr-auto">
       <section
         id="bottom-navigation"
-        className="block fixed inset-x-0 bottom-0 z-10 bg-white navbar-shadow"
+        className=" w-full md:w-1/3 m-auto block fixed inset-x-0 bottom-0 z-10 bg-white navbar-shadow"
       >
         <div id="tabs" className="flex justify-between mx-[35px]">
           <a
