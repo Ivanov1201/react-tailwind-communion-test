@@ -1,6 +1,5 @@
 //import modules
 import React, {FC, ReactNode} from 'react';
-import { useRouter } from 'next/router';
 
 //import components
 import Navbar from '../../components/common/navbar'
@@ -11,7 +10,6 @@ type MainlayoutProps = {
 
 const Mainlayout: FC<MainlayoutProps> = ({children }) => {
 
-    const router = useRouter().pathname.split('/')[1]
     return (
         <>
             <Navbar>

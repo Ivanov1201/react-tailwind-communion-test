@@ -1,11 +1,17 @@
 //modules
 import React, { FC, ReactNode } from "react";
+import { useRouter } from 'next/router';
+
 
 type NavbarProps = {
   children: ReactNode;
 };
 
 const Navbar: FC<NavbarProps> = ({ children }) => {
+
+  const router = useRouter().pathname.split('/')[1]
+  console.log(router)
+
   return (
     <div className="max-w-sm ml-auto mr-auto">
       <section

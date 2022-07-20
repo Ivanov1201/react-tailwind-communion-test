@@ -1,6 +1,7 @@
 //modules
 import React, { FC, useState } from 'react';
 import type { NextPage } from 'next'
+import Image from 'next/image';
 // import InfiniteScroll from 'react-infinite-scroller';
 
 //custom Components
@@ -24,7 +25,7 @@ const TipComponent: FC<TokenTipProps> = ({ number, tip, img }) => {
 						<p className='text-[17px] text-color-text-number font-bold'>{tip}</p>
 					</div>
 				</div>
-				<img src={img} alt="" />
+				<Image  width="82px" height="80px" src={img} alt="" />
 			</div>
 		</>
 	);
@@ -62,7 +63,7 @@ const HistoryComponent: FC<HistoryProps> = ({ checked, tip, time }) => {
 			<div className="mb-[10px] bg-white rounded-[5px] px-[18px] flex flex-wrap justify-between">
 				<div className='flex flex-wrap py-[19px]'>
 					{
-						checked ? (<img src="/images/check-icon.svg" alt="" />) : (<img src="/images/warning-icon.svg" alt="" />)
+						checked ? (<Image width='25px' height='21px' src="/images/check-icon.svg" alt="" />) : (<Image width='25px' height='21px' src="/images/warning-icon.svg" alt="" />)
 					}
 					<p className='text-[15px] ml-[7px] text-color-text-number'>{tip}</p>
 				</div>
@@ -185,7 +186,7 @@ const Home: NextPage = () => {
 									<></>
 								) : (
 									<>
-										<div className="font-medium flex text-color-text-normal text-bold text-[19px]">
+										<div className="font-medium flex text-color-text-normal text-bold text-[19px] ">
 											<img src="/images/emoji-happy.svg" className='mr-[9px]' alt="" />
 											Hi, Alexander
 										</div>
