@@ -5,8 +5,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      xs: "320px",
+      sm: "540px",
+      md: "920px",
+      lg: "1024px",
+      xl: "1440px",
+      "2xl": "1536px",
+    },
     extend: {
       colors: {
+        "active": "#FF8A00",
         "color-text-normal": "#6D6F8A",
         "color-text-placeholder": "#A9ABB9",
         "color-text-number": "#606279",
@@ -20,5 +29,16 @@ module.exports = {
       'roboto': ['Roboto', 'sans-serif'],
     }
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        ".navbar-shadow": {
+          boxShadow: "0px -2px 9px #e1e1e9"
+        },
+        ".navbar-border-transparent": {
+          borderTop: '4px solid transparent'
+        },
+      });
+    }
+  ],
 }

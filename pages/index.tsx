@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <button type="button" onClick={() => router.push('/home')}>
-        Click me???
+        Click me
       </button>
     </div>
   )
