@@ -187,7 +187,7 @@ const Home: NextPage = () => {
 								) : (
 									<>
 										<div className="font-medium flex text-color-text-normal text-bold text-[19px] ">
-											<img src="/images/emoji-happy.svg" className='mr-[9px]' alt="" />
+											<img width='20px' height='20px' src="/images/emoji-happy.svg" className='mr-[9px]' alt="" />
 											Hi, Alexander
 										</div>
 
@@ -197,7 +197,7 @@ const Home: NextPage = () => {
 													<p className='my-[6px]'>Your Balance</p>
 												</div>
 												<div className='flex bg-white rounded-[6px]'>
-													<img src="/images/caret-left-icon.svg" className='mx-[15px]' alt="" width="10" height="15" />
+													<img width='9px' height="15px" src="/images/caret-left-icon.svg" className='mx-[15px]' alt=""  />
 													<input type="text" className='bg-white w-full focus-visible:outline-0 text-[17px] text-color-text-normal rounded-[6px]' defaultValue="5500 PPP" />
 												</div>
 

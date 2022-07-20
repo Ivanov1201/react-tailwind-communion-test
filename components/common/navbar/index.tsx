@@ -42,7 +42,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
             </svg>
           </a>
           <a
-            onClick={() => router.push('/cursor')}
+            onClick={() => router.push('/send')}
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center navbar-border-transparent  py-[20px] "
           >
             <svg
@@ -62,7 +62,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
             </svg>
           </a>
           <a
-            onClick={() => router.push('/shopping')}
+            onClick={() => router.push('/redeem')}
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center navbar-border-transparent  py-[20px] "
           >
             <svg
@@ -90,7 +90,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
             </svg>
           </a>
           <a
-            onClick={() => router.push('/setting')}
+            onClick={() => router.push('/settings')}
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center navbar-border-transparent  py-[20px] "
           >
             <svg
