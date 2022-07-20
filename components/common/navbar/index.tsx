@@ -13,10 +13,10 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
   console.log(router.asPath.split('/')[1])
 
   return (
-    <div className="max-w-sm ml-auto mr-auto">
+    <div className="w-full md:w-1/4 ml-auto mr-auto">
       <section
         id="bottom-navigation"
-        className="block max-w-sm mx-auto fixed inset-x-0 bottom-0 z-10 bg-white navbar-shadow"
+        className="block fixed inset-x-0 bottom-0 z-10 bg-white navbar-shadow"
       >
         <div id="tabs" className="flex justify-between mx-[35px]">
           <a

@@ -173,7 +173,7 @@ const Home: NextPage = () => {
 		<Mainlayout>
 
 			<div className="flex-auto content-center">
-				<div className="max-w-sm max-h-4xl ml-auto mr-auto bg-color-background-body">
+				<div className="bg-color-background-body">
 					<div className="flex flex-col pt-[54px] pr-[25px] pl-[25px] font-roboto overflow-y-auto mobile-screen-height">
 						{/* <InfiniteScroll
 							pageStart={0}
